@@ -1,0 +1,129 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    padding: 20px;
+   background-color:  #f4f7f9;
+   color:#2c3e50;
+}
+p,ul,ol{
+    font-family:  'Roboto Slab',sans-serif;
+    }
+h1,h2,h3{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+h2{color: #1f264d;}
+h3{color: #2a2c9d;}
+/*h2::before{content:'⭐ ' ;}*/
+
+header, main, footer{
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 30px;
+    align-items: center;
+    background-color: #081247;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+header h1, header p, header nav{grid-column: 1; margin: 5px 0;}
+header img{
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    list-style: none;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#about, #research, #education, #projects, #technical, #contact{
+    background-color:white;
+    padding: 10px 25px 20px;
+    border-radius: 8px;
+    border-right: 6px solid #081247;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.06);
+}
+
+@media(max-width: 600px){
+    header{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    header h1, header p, header nav{
+        grid-column: 1;
+    }
+    header img{
+        grid-column: 1;
+        grid-row: 1;
+        width: 140px;
+        height: 140px;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+    .table-div{
+        overflow-x: auto;
+    }
+    .table{
+        max-width: 600px;
+    }
+    
+
+}
+
+
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+}
+th{
+    background-color: #1f204d;
+    color: white;
+    padding: 10px;
+}
+td{
+    background-color: #eef4f6;
+    padding: 10px;
+    border: 1px solid #d5e0e5;
+}
+.button{
+    background-color: #2a2c9d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:hover{background-color: #1f367a;}
+.button:active{transform:scale(0.95);}
+input:focus{outline:3px solid rgba(50, 50, 255, 0.596);}
+input:focus, #measage:focus{outline:3px solid #7fdbd0;}
+a{ color: white; }
+a:hover, a:visited {color:white ; }
+
+
+::selection{
+    background-color:#582a9d;
+    color: white;
+}
+footer{text-align: center;}
+
